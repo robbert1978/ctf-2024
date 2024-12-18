@@ -1,0 +1,49 @@
+#!/bin/sh
+
+export PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+[ -d /dev ] || mkdir -m 0755 /dev
+[ -d /sys ] || mkdir -m 0755 /sys
+[ -d /proc ] || mkdir -m 0755 /proc
+[ -d /etc ] || mkdir -m 0755 /etc
+
+echo 'root:x:0:0:root:/root:/bin/sh' > /etc/passwd
+echo 'ctf:x:1337:1337:ctf:/home/ctf:/bin/sh' >> /etc/passwd
+echo 'root:x:0:' > /etc/group
+echo 'ctf:x:1337:' >> /etc/group
+
+chmod 644 /etc/passwd
+chmod 644 /etc/group
+
+chown -R root:root /
+chmod 700 -R /root
+chmod 700 -R /baby.ko
+chown -R ctf:ctf /home/ctf
+chmod 755 /home/ctf
+chmod 755 /dev
+
+hostname intigriti
+
+mount -t sysfs -o nodev,noexec,nosuid sysfs /sys
+mount -t devtmpfs -o nosuid,mode=0755 udev /dev
+mount -t proc -o nodev,noexec,nosuid proc /proc
+
+echo 2 > /proc/sys/kernel/kptr_restrict
+echo 1 > /proc/sys/kernel/dmesg_restrict
+
+FLAG=$(head -n 100 /dev/random | sha256sum | awk '{printf $1}')
+mv /flag /root/$FLAG
+chmod 0400 /root/$FLAG
+
+insmod /baby.ko
+mknod -m 666 /dev/baby c $(cat /proc/devices | grep baby | awk '{print $1}') 0
+
+echo -e "\nBoot took $(cut -d' ' -f1 /proc/uptime) seconds\n" 
+echo "[ Baby kernel - Intigriti ]"
+
+cd /home/ctf
+setsid cttyhack setuidgid 1337 sh
+
+umount /proc 
+umount /sys
+poweroff -d 0 -n -f

@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.rc": "ruby",
+        "types.h": "c",
+        "typeinfo": "c",
+        "compare": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c",
+        "fuse.h": "c"
+    }
+}

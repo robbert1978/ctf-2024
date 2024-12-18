@@ -1,0 +1,14 @@
+#!/bin/sh
+/bin/mount -t devtmpfs devtmpfs /dev
+/bin/mount -t proc none /proc
+/bin/mount -t sysfs none /sys
+exec 0</dev/console
+exec 1>/dev/console
+exec 2>/dev/console
+
+# insmod /chall.ko
+# chmod 666 /dev/challenge
+
+echo "Boot took $(cut -d' ' -f1 /proc/uptime) seconds"
+cd /home/ctf
+setsid cttyhack setuidgid 1000 sh

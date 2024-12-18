@@ -1,0 +1,1038 @@
+c[?7l[2J[0mSeaBIOS (version 1.15.0-1)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+7FF8B310+7FECB310 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from ROM..c[?7l[2JNo EFI environment detected.
+early console in extract_kernel
+input_data: 0x00000000052152b9
+input_len: 0x0000000001da9d8a
+output: 0x0000000001000000
+output_len: 0x0000000005f3e9ec
+kernel_total_size: 0x0000000005a30000
+needed_size: 0x0000000006000000
+trampoline_32bit: 0x0000000000000000
+Physical KASLR using RDTSC...
+Virtual KASLR using RDTSC...
+
+Decompressing Linux... Parsing ELF... Performing relocations... done.
+Booting the kernel (entry_offset: 0x0000000000000000).
+[    0.000000] Linux version 6.6.10 (robbert@theBlueNoWhere) (gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #4 SMP PREEMPT_DYNAMIC Sun Jul  7 13:16:34 +07 2024
+[    0.000000] Command line: console=ttyS0 root=/dev/sda earlyprintk=serial net.ifnames=0
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffdffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007ffe0000-0x000000007fffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] printk: bootconsole [earlyser0] enabled
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] APIC: Static calls initialized
+[    0.000000] SMBIOS 2.8 present.
+[    0.000000] DMI: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000002] kvm-clock: using sched offset of 454518301 cycles
+[    0.001285] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.005303] tsc: Detected 3193.914 MHz processor
+[    0.011944] last_pfn = 0x7ffe0 max_arch_pfn = 0x400000000
+[    0.013326] MTRR map: 4 entries (3 fixed + 1 variable; max 19), built from 8 variable MTRRs
+[    0.015319] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.019805] found SMP MP-table at [mem 0x000f5ba0-0x000f5baf]
+[    0.022695] ACPI: Early table checksum verification disabled
+[    0.023962] ACPI: RSDP 0x00000000000F59E0 000014 (v00 BOCHS )
+[    0.025346] ACPI: RSDT 0x000000007FFE1960 000034 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.027401] ACPI: FACP 0x000000007FFE180C 000074 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.029491] ACPI: DSDT 0x000000007FFE0040 0017CC (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.031716] ACPI: FACS 0x000000007FFE0000 000040
+[    0.032805] ACPI: APIC 0x000000007FFE1880 000080 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.035027] ACPI: HPET 0x000000007FFE1900 000038 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.037174] ACPI: WAET 0x000000007FFE1938 000028 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.039016] ACPI: Reserving FACP table memory at [mem 0x7ffe180c-0x7ffe187f]
+[    0.040497] ACPI: Reserving DSDT table memory at [mem 0x7ffe0040-0x7ffe180b]
+[    0.042314] ACPI: Reserving FACS table memory at [mem 0x7ffe0000-0x7ffe003f]
+[    0.044014] ACPI: Reserving APIC table memory at [mem 0x7ffe1880-0x7ffe18ff]
+[    0.045759] ACPI: Reserving HPET table memory at [mem 0x7ffe1900-0x7ffe1937]
+[    0.047265] ACPI: Reserving WAET table memory at [mem 0x7ffe1938-0x7ffe195f]
+[    0.049930] No NUMA configuration found
+[    0.050785] Faking a node at [mem 0x0000000000000000-0x000000007ffdffff]
+[    0.052524] NODE_DATA(0) allocated [mem 0x7ffdc000-0x7ffdffff]
+[    0.054020] Zone ranges:
+[    0.054603]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.056069]   DMA32    [mem 0x0000000001000000-0x000000007ffdffff]
+[    0.057582]   Normal   empty
+[    0.058252] Movable zone start for each node
+[    0.059215] Early memory node ranges
+[    0.060062]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.061701]   node   0: [mem 0x0000000000100000-0x000000007ffdffff]
+[    0.063146] Initmem setup node 0 [mem 0x0000000000001000-0x000000007ffdffff]
+[    0.065630] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.065789] On node 0, zone DMA: 97 pages in unavailable ranges
+[    0.094081] On node 0, zone DMA32: 32 pages in unavailable ranges
+[    0.157176] kasan: KernelAddressSanitizer initialized
+[    0.160410] ACPI: PM-Timer IO Port: 0x608
+[    0.161395] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+[    0.162845] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+[    0.164515] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.165982] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+[    0.167690] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.169259] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+[    0.170927] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+[    0.172453] ACPI: Using ACPI (MADT) for SMP configuration information
+[    0.173970] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.175158] smpboot: Allowing 2 CPUs, 0 hotplug CPUs
+[    0.176373] kvm-guest: APIC: eoi() replaced with kvm_guest_apic_eoi_write()
+[    0.178246] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.179871] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.181615] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.183332] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.184952] [mem 0x80000000-0xfeffbfff] available for PCI devices
+[    0.186623] Booting paravirtualized kernel on KVM
+[    0.187788] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.236284] setup_percpu: NR_CPUS:64 nr_cpumask_bits:2 nr_cpu_ids:2 nr_node_ids:1
+[    0.238683] percpu: Embedded 66 pages/cpu s232744 r8192 d29400 u1048576
+[    0.240772] Kernel command line: net.ifnames=0 console=ttyS0 root=/dev/sda earlyprintk=serial net.ifnames=0
+[    0.243974] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.246532] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.248577] Fallback order for Node 0: 0 
+[    0.248587] Built 1 zonelists, mobility grouping on.  Total pages: 515808
+[    0.251374] Policy zone: DMA32
+[    0.252153] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.253597] stackdepot: allocating hash table via alloc_large_system_hash
+[    0.256653] stackdepot hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.288628] Memory: 1685068K/2096632K available (53248K kernel code, 8417K rwdata, 10756K rodata, 9156K init, 924K bss, 411308K reserved, 0K cma-reserved)
+[    0.292428] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+Poking KASLR using RDTSC...
+[    0.296825] Dynamic Preempt: voluntary
+[    0.297982] rcu: Preemptible hierarchical RCU implementation.
+[    0.299371] rcu: 	RCU event tracing is enabled.
+[    0.300492] rcu: 	RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=2.
+[    0.302110] 	Trampoline variant of Tasks RCU enabled.
+[    0.303378] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.305050] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[    0.346836] NR_IRQS: 4352, nr_irqs: 440, preallocated irqs: 16
+[    0.349105] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.360598] Console: colour VGA+ 80x25
+[    0.361610] printk: console [ttyS0] enabled
+[    0.361610] printk: console [ttyS0] enabled
+[    0.363760] printk: bootconsole [earlyser0] disabled
+[    0.363760] printk: bootconsole [earlyser0] disabled
+[    0.366237] ACPI: Core revision 20230628
+[    0.367903] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604467 ns
+[    0.370560] APIC: Switch to symmetric I/O mode setup
+[    0.375064] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.376969] tsc: Marking TSC unstable due to TSCs unsynchronized
+[    0.378855] Calibrating delay loop (skipped) preset value.. 6387.82 BogoMIPS (lpj=3193914)
+[    0.380925] process: using AMD E400 aware idle routine
+[    0.381862] Last level iTLB entries: 4KB 512, 2MB 255, 4MB 127
+[    0.382850] Last level dTLB entries: 4KB 512, 2MB 255, 4MB 127, 1GB 0
+[    0.383864] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.384854] Spectre V2 : Mitigation: Retpolines
+[    0.385850] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.386850] Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+[    0.387867] x86/fpu: x87 FPU will use FXSAVE
+[    0.428909] Freeing SMP alternatives memory: 44K
+[    0.429854] pid_max: default: 32768 minimum: 301
+[    0.431035] LSM: initializing lsm=capability,selinux,integrity
+[    0.432901] SELinux:  Initializing.
+[    0.434133] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.434878] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.540120] smpboot: CPU0: AMD QEMU Virtual CPU version 2.5+ (family: 0xf, model: 0x6b, stepping: 0x1)
+[    0.541555] RCU Tasks: Setting shift to 1 and lim to 1 rcu_task_cb_adjust=1.
+[    0.541978] Performance Events: AMD PMU driver.
+[    0.542873] ... version:                0
+[    0.544851] ... bit width:              48
+[    0.545850] ... generic registers:      4
+[    0.546850] ... value mask:             0000ffffffffffff
+[    0.547849] ... max period:             00007fffffffffff
+[    0.548850] ... fixed-purpose events:   0
+[    0.549851] ... event mask:             000000000000000f
+[    0.551077] signal: max sigframe size: 1440
+[    0.552012] rcu: Hierarchical SRCU implementation.
+[    0.552852] rcu: 	Max phase no-delay instances is 400.
+[    0.556830] smp: Bringing up secondary CPUs ...
+[    0.558295] smpboot: x86: Booting SMP configuration:
+[    0.558854] .... node  #0, CPUs:      #1
+[    0.561020] smp: Brought up 1 node, 2 CPUs
+[    0.562850] smpboot: Max logical packages: 1
+[    0.563850] smpboot: Total of 2 processors activated (12775.65 BogoMIPS)
+[    0.566853] devtmpfs: initialized
+[    0.572437] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.572853] futex hash table entries: 512 (order: 3, 32768 bytes, linear)
+[    0.574848] PM: RTC time: 06:33:51, date: 2024-07-07
+[    0.576871] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.579620] audit: initializing netlink subsys (disabled)
+[    0.580073] audit: type=2000 audit(1720334031.338:1): state=initialized audit_enabled=0 res=1
+[    0.581760] thermal_sys: Registered thermal governor 'step_wise'
+[    0.581849] thermal_sys: Registered thermal governor 'user_space'
+[    0.582903] cpuidle: using governor menu
+[    0.586879] PCI: Using configuration type 1 for base access
+[    0.589119] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[    0.595515] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.595851] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.598918] ACPI: Added _OSI(Module Device)
+[    0.599858] ACPI: Added _OSI(Processor Device)
+[    0.600851] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.601849] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.648539] ACPI: 1 ACPI AML tables successfully acquired and loaded
+[    0.652407] ACPI: _OSC evaluation for CPUs failed, trying _PDC
+[    0.657747] ACPI: Interpreter enabled
+[    0.658019] ACPI: PM: (supports S0 S3 S4 S5)
+[    0.658849] ACPI: Using IOAPIC for interrupt routing
+[    0.659992] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.660849] PCI: Using E820 reservations for host bridge windows
+[    0.665150] ACPI: Enabled 2 GPEs in block 00 to 0F
+[    0.743999] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.744912] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+[    0.745854] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    0.747915] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended configuration space under this bridge
+[    0.750506] PCI host bridge to bus 0000:00
+[    0.750861] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.751861] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.752862] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.753861] pci_bus 0000:00: root bus resource [mem 0x80000000-0xfebfffff window]
+[    0.754860] pci_bus 0000:00: root bus resource [mem 0x100000000-0x17fffffff window]
+[    0.755866] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.757893] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+[    0.785094] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+[    0.789983] pci 0000:00:01.1: [8086:7010] type 00 class 0x010180
+[    0.793189] pci 0000:00:01.1: reg 0x20: [io  0xc040-0xc04f]
+[    0.795231] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.795851] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.796851] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.797851] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.800473] pci 0000:00:01.3: [8086:7113] type 00 class 0x068000
+[    0.802112] pci 0000:00:01.3: quirk: [io  0x0600-0x063f] claimed by PIIX4 ACPI
+[    0.802898] pci 0000:00:01.3: quirk: [io  0x0700-0x070f] claimed by PIIX4 SMB
+[    0.805195] pci 0000:00:02.0: [1234:1111] type 00 class 0x030000
+[    0.807862] pci 0000:00:02.0: reg 0x10: [mem 0xfd000000-0xfdffffff pref]
+[    0.811917] pci 0000:00:02.0: reg 0x18: [mem 0xfebb0000-0xfebb0fff]
+[    0.816248] pci 0000:00:02.0: reg 0x30: [mem 0xfeba0000-0xfebaffff pref]
+[    0.817193] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.844725] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+[    0.845851] pci 0000:00:03.0: reg 0x10: [mem 0xfeb80000-0xfeb9ffff]
+[    0.848231] pci 0000:00:03.0: reg 0x14: [io  0xc000-0xc03f]
+[    0.852208] pci 0000:00:03.0: reg 0x30: [mem 0xfeb00000-0xfeb7ffff pref]
+[    0.889020] ACPI: PCI: Interrupt link LNKA configured for IRQ 10
+[    0.893462] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+[    0.897115] ACPI: PCI: Interrupt link LNKC configured for IRQ 11
+[    0.901645] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+[    0.903439] ACPI: PCI: Interrupt link LNKS configured for IRQ 9
+[    0.908907] iommu: Default domain type: Translated
+[    0.909849] iommu: DMA domain TLB invalidation policy: lazy mode
+[    0.912215] SCSI subsystem initialized
+[    0.913995] ACPI: bus type USB registered
+[    0.915086] usbcore: registered new interface driver usbfs
+[    0.915940] usbcore: registered new interface driver hub
+[    0.916944] usbcore: registered new device driver usb
+[    0.918934] pps_core: LinuxPPS API ver. 1 registered
+[    0.919849] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.920906] PTP clock support registered
+[    0.922678] Advanced Linux Sound Architecture Driver Initialized.
+[    0.925621] NetLabel: Initializing
+[    0.925849] NetLabel:  domain hash size = 128
+[    0.926849] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.928075] NetLabel:  unlabeled traffic allowed by default
+[    0.929305] PCI: Using ACPI for IRQ routing
+[    0.931119] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.931845] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.931845] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.931851] vgaarb: loaded
+[    0.933878] hpet: 3 channels of 0 reserved for per-cpu timers
+[    0.934877] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    0.935849] hpet0: 3 comparators, 64-bit 100.000000 MHz counter
+[    0.943550] clocksource: Switched to clocksource kvm-clock
+[    0.945218] VFS: Disk quotas dquot_6.6.0
+[    0.946112] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.948388] pnp: PnP ACPI init
+[    0.957421] pnp: PnP ACPI: found 6 devices
+[    0.981513] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.984163] NET: Registered PF_INET protocol family
+[    0.985565] IP idents hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.988982] tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes, linear)
+[    0.991398] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.993374] TCP established hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.995760] TCP bind hash table entries: 16384 (order: 7, 524288 bytes, linear)
+[    0.997588] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.999475] UDP hash table entries: 1024 (order: 3, 32768 bytes, linear)
+[    1.001223] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes, linear)
+[    1.003449] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    1.005932] RPC: Registered named UNIX socket transport module.
+[    1.007448] RPC: Registered udp transport module.
+[    1.008595] RPC: Registered tcp transport module.
+[    1.009830] RPC: Registered tcp-with-tls transport module.
+[    1.011393] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.014343] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    1.016275] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    1.017759] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    1.019547] pci_bus 0000:00: resource 7 [mem 0x80000000-0xfebfffff window]
+[    1.021345] pci_bus 0000:00: resource 8 [mem 0x100000000-0x17fffffff window]
+[    1.023755] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+[    1.025307] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    1.026954] PCI: CLS 0 bytes, default 64
+[    1.563717] Initialise system trusted keyrings
+[    1.565653] workingset: timestamp_bits=56 max_order=19 bucket_order=0
+[    1.569473] NFS: Registering the id_resolver key type
+[    1.571036] Key type id_resolver registered
+[    1.572381] Key type id_legacy registered
+[    1.573965] 9p: Installing v9fs 9p2000 file system support
+[    1.585925] Key type asymmetric registered
+[    1.586933] Asymmetric key parser 'x509' registered
+[    1.588280] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+[    1.590227] io scheduler mq-deadline registered
+[    1.591333] io scheduler kyber registered
+[    1.593651] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    1.596117] ACPI: button: Power Button [PWRF]
+[    1.599509] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.602278] 00:04: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    1.609896] Non-volatile memory driver v1.3
+[    1.611032] Linux agpgart interface v0.103
+[    1.612724] [dev] It's mappin' time!
+[    1.613665] ACPI: bus type drm_connector registered
+[    1.635678] loop: module loaded
+[    1.642779] scsi host0: ata_piix
+[    1.645460] scsi host1: ata_piix
+[    1.646856] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc040 irq 14
+[    1.648662] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc048 irq 15
+[    1.653236] e100: Intel(R) PRO/100 Network Driver
+[    1.654381] e100: Copyright(c) 1999-2006 Intel Corporation
+[    1.655687] e1000: Intel(R) PRO/1000 Network Driver
+[    1.656952] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    1.807540] ata2: found unknown device (class 0)
+[    1.810045] ata1: found unknown device (class 0)
+[    1.812327] ata1.00: ATA-7: QEMU HARDDISK, 2.5+, max UDMA/100
+[    1.813708] ata1.00: 4194304 sectors, multi 16: LBA48 
+[    1.816019] ata2.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100
+[    1.819451] scsi 0:0:0:0: Direct-Access     ATA      QEMU HARDDISK    2.5+ PQ: 0 ANSI: 5
+[    1.822959] scsi 0:0:0:0: Attached scsi generic sg0 type 0
+[    1.823736] sd 0:0:0:0: [sda] 4194304 512-byte logical blocks: (2.15 GB/2.00 GiB)
+[    1.827518] scsi 1:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5
+[    1.834191] sd 0:0:0:0: [sda] Write Protect is off
+[    1.836264] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.840022] sd 0:0:0:0: [sda] Preferred minimum I/O size 512 bytes
+[    1.847098] sd 0:0:0:0: [sda] Attached SCSI disk
+[    1.850022] sr 1:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
+[    1.852175] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    1.866938] sr 1:0:0:0: Attached scsi generic sg1 type 5
+[    4.411183] ACPI: \_SB_.LNKC: Enabled at IRQ 11
+[    4.763116] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 52:54:00:12:34:56
+[    4.764989] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+[    4.766919] e1000e: Intel(R) PRO/1000 Network Driver
+[    4.768166] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    4.769763] sky2: driver version 1.30
+[    4.772042] usbcore: registered new interface driver usblp
+[    4.773503] usbcore: registered new interface driver usb-storage
+[    4.775178] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    4.778485] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    4.779742] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    4.783009] rtc_cmos 00:05: RTC can wake from S4
+[    4.784908] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+[    4.789088] rtc_cmos 00:05: registered as rtc0
+[    4.790518] rtc_cmos 00:05: alarms up to one day, y3k, 242 bytes nvram, hpet irqs
+[    4.794781] device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com
+[    4.798861] hid: raw HID events driver (C) Jiri Kosina
+[    4.802674] usbcore: registered new interface driver usbhid
+[    4.805274] usbhid: USB HID core driver
+[    4.809950] Initializing XFRM netlink socket
+[    4.811701] NET: Registered PF_INET6 protocol family
+[    4.815223] Segment Routing with IPv6
+[    4.816434] In-situ OAM (IOAM) with IPv6
+[    4.817641] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    4.820387] NET: Registered PF_PACKET protocol family
+[    4.821867] 9pnet: Installing 9P2000 support
+[    4.823062] Key type dns_resolver registered
+[    4.825652] IPI shorthand broadcast: enabled
+[    4.881277] sched_clock: Marking stable (4856017588, 25121200)->(4962722871, -81584083)
+[    4.885171] registered taskstats version 1
+[    4.886375] Loading compiled-in X.509 certificates
+[    4.927083] PM:   Magic number: 0:196:569
+[    4.928258] printk: console [netcon0] enabled
+[    4.929536] netconsole: network logging started
+[    4.931233] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    4.933903] kworker/u4:0 (53) used greatest stack depth: 28976 bytes left
+[    4.937227] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    4.940824] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[    4.944810] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    4.946230] ALSA device list:
+[    4.948368] cfg80211: failed to load regulatory.db
+[    4.949107]   No soundcards found.
+[    5.417924] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
+[    5.419790] md: Waiting for all devices to be available before autodetect
+[    5.420777] md: If you don't use raid, use raid=noautodetect
+[    5.421561] md: Autodetecting RAID arrays.
+[    5.422218] md: autorun ...
+[    5.422646] md: ... autorun DONE.
+[    5.429713] EXT4-fs (sda): INFO: recovery required on readonly filesystem
+[    5.431003] EXT4-fs (sda): write access will be enabled during recovery
+[    5.470216] EXT4-fs (sda): recovery complete
+[    5.474943] EXT4-fs (sda): mounted filesystem 2bed99fd-19a8-4f6d-8d74-b9ff2b5553fb ro with ordered data mode. Quota mode: none.
+[    5.478530] VFS: Mounted root (ext4 filesystem) readonly on device 8:0.
+[    5.482258] devtmpfs: mounted
+[    5.485306] Freeing unused kernel image (initmem) memory: 9156K
+[    5.486173] Write protecting the kernel read-only data: 65536k
+[    5.487942] Freeing unused kernel image (rodata/data gap) memory: 1532K
+[    5.565845] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    5.567178] Run /sbin/init as init process
+[    6.435539] SELinux:  Class mctp_socket not defined in policy.
+[    6.436996] SELinux:  Class anon_inode not defined in policy.
+[    6.438575] SELinux:  Class io_uring not defined in policy.
+[    6.439598] SELinux:  Class user_namespace not defined in policy.
+[    6.441222] SELinux: the above unknown classes and permissions will be allowed
+[    6.496020] SELinux:  policy capability network_peer_controls=1
+[    6.497610] SELinux:  policy capability open_perms=1
+[    6.498891] SELinux:  policy capability extended_socket_class=1
+[    6.500524] SELinux:  policy capability always_check_network=0
+[    6.502042] SELinux:  policy capability cgroup_seclabel=1
+[    6.503164] SELinux:  policy capability nnp_nosuid_transition=1
+[    6.504447] SELinux:  policy capability genfs_seclabel_symlinks=0
+[    6.505696] SELinux:  policy capability ioctl_skip_cloexec=0
+[    6.521553] audit: type=1403 audit(1720334037.279:2): auid=4294967295 ses=4294967295 lsm=selinux res=1
+[    6.528859] systemd[1]: Successfully loaded SELinux policy in 852.788ms.
+[    6.612669] systemd[1]: Relabelled /dev, /dev/shm, /run, /sys/fs/cgroup in 21.077ms.
+[    6.624407] systemd[1]: systemd 247.3-7+deb11u5 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +ZSTD +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
+[    6.629010] systemd[1]: Detected virtualization kvm.
+[    6.630070] systemd[1]: Detected architecture x86-64.
+
+Welcome to [1mDebian GNU/Linux 11 (bullseye)[0m!
+
+[    6.636125] systemd[1]: Set hostname to <syzkaller>.
+[    6.699712] selinuxenabled (63) used greatest stack depth: 26568 bytes left
+[    6.757722] grep (66) used greatest stack depth: 26136 bytes left
+[    7.047090] systemd[1]: Queued start job for default target Graphical Interface.
+[    7.163194] random: crng init done
+[    7.164549] systemd[1]: system-getty.slice: unit configures an IP firewall, but the local system does not support BPF/cgroup firewalling.
+[    7.166374] systemd[1]: (This warning is only shown for the first unit using IP firewalling.)
+[    7.180394] systemd[1]: Created slice system-getty.slice.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-getty.slice[0m.
+[    7.186039] systemd[1]: Created slice system-modprobe.slice.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-modprobe.slice[0m.
+[    7.191406] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-serial\x2dgetty.slice[0m.
+[    7.194896] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[[0;32m  OK  [0m] Started [0;1;39mDispatch Password …ts to Console Directory Watch[0m.
+[    7.199444] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Started [0;1;39mForward Password R…uests to Wall Directory Watch[0m.
+[    7.204022] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[[0;32m  OK  [0m] Set up automount [0;1;39mArbitrary…s File System Automount Point[0m.
+[    7.207976] systemd[1]: Reached target Local Encrypted Volumes.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
+[    7.211226] systemd[1]: Reached target Paths.
+[[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
+[    7.213739] systemd[1]: Reached target Remote File Systems.
+[[0;32m  OK  [0m] Reached target [0;1;39mRemote File Systems[0m.
+[    7.216321] systemd[1]: Reached target Slices.
+[[0;32m  OK  [0m] Reached target [0;1;39mSlices[0m.
+[    7.218666] systemd[1]: Reached target Swap.
+[[0;32m  OK  [0m] Reached target [0;1;39mSwap[0m.
+[    7.223992] systemd[1]: Listening on Syslog Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mSyslog Socket[0m.
+[    7.226539] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[[0;32m  OK  [0m] Listening on [0;1;39minitctl Compatibility Named Pipe[0m.
+[    7.230453] systemd[1]: Listening on Journal Audit Socket.
+[    7.230488] audit: type=1400 audit(1720334037.987:3): avc:  denied  { audit_read } for  pid=1 comm="systemd" capability=37  scontext=system_u:system_r:kernel_t:s0 tcontext=system_u:system_r:kernel_t:s0 tclass=capability2 permissive=1
+[[0;32m  OK  [0m] Listening on [0;1;39mJournal Audit Socket[0m.
+[    7.237517] systemd[1]: Listening on Journal Socket (/dev/log).
+[[0;32m  OK  [0m] Listening on [0;1;39mJournal Socket (/dev/log)[0m.
+[    7.244192] systemd[1]: Listening on Journal Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mJournal Socket[0m.
+[    7.249059] systemd[1]: Listening on udev Control Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mudev Control Socket[0m.
+[    7.252186] systemd[1]: Listening on udev Kernel Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mudev Kernel Socket[0m.
+[    7.254285] systemd[1]: Reached target Sockets.
+[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
+[    7.268638] systemd[1]: Mounting Huge Pages File System...
+         Mounting [0;1;39mHuge Pages File System[0m...
+[    7.278424] systemd[1]: Mounting POSIX Message Queue File System...
+         Mounting [0;1;39mPOSIX Message Queue File System[0m...
+[    7.296473] systemd[1]: Mounting /proc/sys/fs/binfmt_misc...
+         Mounting [0;1;39m/proc/sys/fs/binfmt_misc[0m...
+[    7.304977] systemd[1]: Mounting /sys/kernel/config...
+         Mounting [0;1;39m/sys/kernel/config[0m...
+[    7.313814] systemd[1]: Mounting /sys/kernel/debug...
+         Mounting [0;1;39m/sys/kernel/debug[0m...
+[    7.328468] systemd[1]: Mounting Kernel Trace File System...
+         Mounting [0;1;39mKernel Trace File System[0m...
+[    7.331278] systemd[1]: Condition check resulted in Create list of static device nodes for the current kernel being skipped.
+[    7.339363] systemd[1]: Starting Load Kernel Module fuse...
+         Starting [0;1;39mLoad Kernel Module fuse[0m...
+[    7.348016] systemd[1]: Starting Journal Service...
+         Starting [0;1;39mJournal Service[0m...
+[    7.368563] systemd[1]: Starting Load Kernel Modules...
+         Starting [0;1;39mLoad Kernel Modules[0m...
+[    7.383491] systemd[1]: Starting Remount Root and Kernel File Systems...
+         Starting [0;1;39mRemount Root and Kernel File Systems[0m...
+[    7.408488] systemd[1]: Starting Coldplug All udev Devices...
+         Starting [0;1;39mColdplug All udev Devices[0m...
+[    7.430331] systemd[1]: Mounted Huge Pages File System.
+[[0;32m  OK  [0m] Mounted [0;1;39mHuge Pages File System[0m.
+[    7.440023] systemd[1]: Mounted POSIX Message Queue File System.
+[[0;32m  OK  [0m] Mounted [0;1;39mPOSIX Message Queue File System[0m.
+[    7.451467] systemd[1]: Mounted /proc/sys/fs/binfmt_misc.
+[[0;32m  OK  [0m] Mounted [0;1;39m/proc/sys/fs/binfmt_misc[0m.
+[    7.455111] systemd[1]: Mounted /sys/kernel/config.
+[[0;32m  OK  [0m] Mounted [0;1;39m/sys/kernel/config[0m.
+[    7.459097] systemd[1]: Mounted /sys/kernel/debug.
+[[0;32m  OK  [0m] Mounted [0;1;39m/sys/kernel/debug[0m.
+[    7.461913] EXT4-fs (sda): re-mounted 2bed99fd-19a8-4f6d-8d74-b9ff2b5553fb r/w. Quota mode: none.
+[    7.462390] systemd[1]: Mounted Kernel Trace File System.
+[[0;32m  OK  [0m] Mounted [0;1;39mKernel Trace File System[0m.
+[    7.476621] systemd[1]: modprobe@fuse.service: Succeeded.
+[    7.483556] systemd[1]: Finished Load Kernel Module fuse.
+[[0;32m  OK  [0m] Finished [0;1;39mLoad Kernel Module fuse[0m.
+[    7.489810] systemd[1]: Finished Load Kernel Modules.
+[[0;32m  OK  [0m] Finished [0;1;39mLoad Kernel Modules[0m.
+[    7.495092] systemd[1]: Finished Remount Root and Kernel File Systems.
+[[0;32m  OK  [0m] Finished [0;1;39mRemount Root and Kernel File Systems[0m.
+[    7.499399] systemd[1]: Condition check resulted in FUSE Control File System being skipped.
+[    7.504290] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    7.508972] systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+[    7.512489] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+[    7.539527] systemd[1]: Starting Load/Save Random Seed...
+         Starting [0;1;39mLoad/Save Random Seed[0m...
+[    7.569020] systemd[1]: Starting Apply Kernel Variables...
+         Starting [0;1;39mApply Kernel Variables[0m...
+[    7.594445] systemd[1]: Starting Create System Users...
+         Starting [0;1;39mCreate System Users[0m...
+[    7.601572] systemd[1]: Started Journal Service.
+[[0;32m  OK  [0m] Started [0;1;39mJournal Service[0m.
+[    7.614417] systemd-random- (89) used greatest stack depth: 25104 bytes left
+[[0;32m  OK  [0m] Finished [0;1;39mLoad/Save Random Seed[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mApply Kernel Variables[0m.
+         Starting [0;1;39mFlush Journal to Persistent Storage[0m...
+[    7.679500] systemd-journald[82]: Received client request to flush runtime journal.
+[[0;32m  OK  [0m] Finished [0;1;39mCreate System Users[0m.
+[    7.696125] systemd-journald[82]: File /var/log/journal/8b6516c2b3924f1cb7f452e0ac3e6f51/system.journal corrupted or uncleanly shut down, renaming and replacing.
+         Starting [0;1;39mCreate Static Device Nodes in /dev[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mFlush Journal to Persistent Storage[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems (Pre)[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems[0m.
+         Starting [0;1;39mCreate Volatile Files and Directories[0m...
+         Starting [0;1;39mRule-based Manage…for Device Events and Files[0m...
+[[0;32m  OK  [0m] Started [0;1;39mRule-based Manager for Device Events and Files[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
+         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mColdplug All udev Devices[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt download activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt upgrade and clean activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mPeriodic ext4 Onli…ata Check for All Filesystems[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDiscard unused blocks once a week[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily rotation of log files[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mTimers[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRegular background program processing daemon[0m.
+         Starting [0;1;39mRemove Stale Onli…t4 Metadata Check Snapshots[0m...
+         Starting [0;1;39mgetty on tty2-tty…nd logind are not available[0m...
+         Starting [0;1;39mHelper to synchronize boot up for ifupdown[0m...
+         Starting [0;1;39mSystem Logging Service[0m...
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/ttyS0[0m.
+[    8.504237] audit: type=1107 audit(1720334039.259:4): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:kernel_t:s0 msg='avc:  denied  { start } for auid=n/a uid=0 gid=0 path="/lib/systemd/system/getty@.service" cmdline="" scontext=system_u:system_r:kernel_t:s0 tcontext=system_u:object_r:unlabeled_t:s0 tclass=service permissive=1
+[    8.504237]  exe="/usr/lib/systemd/systemd" sauid=0 hostname=? addr=? terminal=?'
+[    8.533663] audit: type=1107 audit(1720334039.271:5): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:kernel_t:s0 msg='avc:  denied  { status } for auid=n/a uid=0 gid=0 path="/lib/systemd/system/getty@.service" cmdline="" scontext=system_u:system_r:kernel_t:s0 tcontext=system_u:object_r:unlabeled_t:s0 tclass=service permissive=1
+[    8.533663]  exe="/usr/lib/systemd/systemd" sauid=0 hostname=? addr=? terminal=?'
+[[0;32m  OK  [0m] Started [0;1;39mSystem Logging Service[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mLoad/Save RF …itch Status /dev/rfkill Watch[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mgetty on tty2-tty… and logind are not available[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mHelper to synchronize boot up for ifupdown[0m.
+         Starting [0;1;39mRaise network interfaces[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mRemove Stale Onli…ext4 Metadata Check Snapshots[0m.
+[    8.821710] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[[0;32m  OK  [0m] Finished [0;1;39mRaise network interfaces[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
+         Starting [0;1;39mOpenBSD Secure Shell server[0m...
+         Starting [0;1;39mPermit User Sessions[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Started [0;1;39mGetty on tty1[0m.
+[[0;32m  OK  [0m] Started [0;1;39mGetty on tty2[0m.
+[[0;32m  OK  [0m] Started [0;1;39mGetty on tty3[0m.
+[[0;32m  OK  [0m] Started [0;1;39mGetty on tty4[0m.
+[[0;32m  OK  [0m] Started [0;1;39mGetty on tty5[0m.
+[[0;32m  OK  [0m] Started [0;1;39mGetty on tty6[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSerial Getty on ttyS0[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLogin Prompts[0m.
+[[0;32m  OK  [0m] Started [0;1;39mOpenBSD Secure Shell server[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mMulti-User System[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mGraphical Interface[0m.
+         Starting [0;1;39mUpdate UTMP about System Runlevel Changes[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Runlevel Changes[0m.
+
+Debian GNU/Linux 11 syzkaller ttyS0
+
+syzkaller login: root
+Linux syzkaller 6.6.10 #4 SMP PREEMPT_DYNAMIC Sun Jul  7 13:16:34 +07 2024 x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+A valid context for root could not be obtained.
+Last login: Sat Jul  6 18:07:27 UTC 2024 on ttyS0
+[?2004hroot@syzkaller:~# cat /rio[K[K[Kproc/ve[K[Kcmdline
+[?2004lnet.ifnames=0 console=ttyS0 root=/dev/sda earlyprintk=serial net.ifnames=0
+[?2004hroot@syzkaller:~# ca tgf[K[K[K[Kt /etc/passwd
+[?2004lroot::0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-network:x:101:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:102:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+sshd:x:103:65534::/run/sshd:/usr/sbin/nologin
+systemd-timesync:x:999:999:systemd Time Synchronization:/:/usr/sbin/nologin
+systemd-coredump:x:998:998:systemd Core Dumper:/:/usr/sbin/nologin
+[?2004hroot@syzkaller:~# su root
+[?2004l[?2004hroot@syzkaller:~# ext[Kit
+[?2004lexit
+[?2004hroot@syzkaller:~# rm [7m/home/robbert/.ssh/known_hosts[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/home/robbert/.ssh/known_hosts
+[?2004lrm: cannot remove '/home/robbert/.ssh/known_hosts': No such file or directory
+[?2004hroot@syzkaller:~# rm /home/robbert/.ssh/known_hosts^C[?2004l[?2004h[?2004l
+[?2004hroot@syzkaller:~# ct[Kat [7m/etc/ssh/sshd_config[27m/etc/ssh/sshd_config
+[?2004l#	$OpenBSD: sshd_config,v 1.103 2018/04/09 20:41:22 tj Exp $
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/bin:/bin:/usr/sbin:/sbin
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+#HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_ecdsa_key
+#HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Ciphers and keying
+#RekeyLimit default none
+
+# Logging
+#SyslogFacility AUTH
+#LogLevel INFO
+
+# Authentication:
+
+#LoginGraceTime 2m
+#PermitRootLogin prohibit-password
+#StrictModes yes
+#MaxAuthTries 6
+#MaxSessions 10
+
+#PubkeyAuthentication yes
+
+# Expect .ssh/authorized_keys2 to be disregarded by default in future.
+#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2
+
+#AuthorizedPrincipalsFile none
+
+#AuthorizedKeysCommand none
+#AuthorizedKeysCommandUser nobody
+
+# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
+#HostbasedAuthentication no
+# Change to yes if you don't trust ~/.ssh/known_hosts for
+# HostbasedAuthentication
+#IgnoreUserKnownHosts no
+# Don't read the user's ~/.rhosts and ~/.shosts files
+#IgnoreRhosts yes
+
+# To disable tunneled clear text passwords, change to no here!
+#PasswordAuthentication yes
+#PermitEmptyPasswords no
+
+# Change to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)
+ChallengeResponseAuthentication no
+
+# Kerberos options
+#KerberosAuthentication no
+#KerberosOrLocalPasswd yes
+#KerberosTicketCleanup yes
+#KerberosGetAFSToken no
+
+# GSSAPI options
+#GSSAPIAuthentication no
+#GSSAPICleanupCredentials yes
+#GSSAPIStrictAcceptorCheck yes
+#GSSAPIKeyExchange no
+
+# Set this to 'yes' to enable PAM authentication, account processing,
+# and session processing. If this is enabled, PAM authentication will
+# be allowed through the ChallengeResponseAuthentication and
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication via ChallengeResponseAuthentication may bypass
+# the setting of "PermitRootLogin without-password".
+# If you just want the PAM account and session checks to run without
+# PAM authentication, then enable this but set PasswordAuthentication
+# and ChallengeResponseAuthentication to 'no'.
+UsePAM yes
+
+#AllowAgentForwarding yes
+#AllowTcpForwarding yes
+#GatewayPorts no
+X11Forwarding yes
+#X11DisplayOffset 10
+#X11UseLocalhost yes
+#PermitTTY yes
+PrintMotd no
+#PrintLastLog yes
+#TCPKeepAlive yes
+#PermitUserEnvironment no
+#Compression delayed
+#ClientAliveInterval 0
+#ClientAliveCountMax 3
+#UseDNS no
+#PidFile /var/run/sshd.pid
+#MaxStartups 10:30:100
+#PermitTunnel no
+#ChrootDirectory none
+#VersionAddendum none
+
+# no default banner path
+#Banner none
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+# Example of overriding settings on a per-user basis
+#Match User anoncvs
+#	X11Forwarding no
+#	AllowTcpForwarding no
+#	PermitTTY no
+#	ForceCommand cvs server
+[?2004hroot@syzkaller:~# vim [7m/etc/ssh/sshd_config[27m/etc/ssh/sshd_config
+[?2004l-bash: vim: command not found
+[?2004hroot@syzkaller:~# i [K[Kvi [7m/etc/ssh/sshd_config[27m/etc/ssh/sshd_config
+[?2004l[1;24r[27m[24m[0m[H[J[24;1H"/etc/ssh/sshd_config" 123 lines, 3289 bytes[1;1H#[7C$OpenBSD: sshd_config,v 1.103 2018/04/09 20:41:22 tj Exp $
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/bin:/bin:/usr/sbin:/sbin
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+#HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_ecdsa_key
+#HostKey /etc/ssh/ssh_host_ed25519_key[1;1H
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;23r[23;1H
+[1;24r[23;1H# Ciphers and keying[24;1H[K[23;1H[1;23r[23;1H
+[1;24r[23;1H#RekeyLimit default none[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H# Logging[1;23r[23;1H
+[1;24r[23;1H#SyslogFacility AUTH[1;23r[23;1H
+[1;24r[23;1H#LogLevel INFO[1;23r[23;1H
+[1;24r[23;1H[22;1H[21;1H[20;1H[19;1H
+
+
+
+[1;23r[23;1H
+[1;24r[23;1H# Authentication:[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H#LoginGraceTime 2m[1;23r[23;1H
+[1;24r[23;1H#PermitRootLogin prohibit-password[1;23r[23;1H
+[1;24r[23;1H#StrictModes yes[1;23r[23;1H
+[1;24r[23;1H#MaxAuthTries 6[1;23r[23;1H
+[1;24r[23;1H#MaxSessions 10[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H#PubkeyAuthentication yes[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H# Expect .ssh/authorized_keys2 to be disregarded by default in future.[1;23r[23;1H
+[1;24r[23;1H#AuthorizedKeysFile     .ssh/authorized_keys .ssh/authorized_keys2[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H#AuthorizedPrincipalsFile none[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H#AuthorizedKeysCommand none[1;23r[23;1H
+[1;24r[23;1H#AuthorizedKeysCommandUser nobody[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts[1;23r[23;1H
+[1;24r[23;1H#HostbasedAuthentication no[1;23r[23;1H
+[1;24r[23;1H# Change to yes if you don't trust ~/.ssh/known_hosts for[1;23r[23;1H
+[1;24r[23;1H# HostbasedAuthentication[1;23r[23;1H
+[1;24r[23;1H#IgnoreUserKnownHosts no[1;23r[23;1H
+[1;24r[23;1H# Don't read the user's ~/.rhosts and ~/.shosts files[1;23r[23;1H
+[1;24r[23;1H#IgnoreRhosts yes[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H# To disable tunneled clear text passwords, change to no here![1;23r[23;1H
+[1;24r[23;1H#PasswordAuthentication yes[1;23r[23;1H
+[1;24r[23;1H#PermitEmptyPasswords no[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H# Change to yes to enable challenge-response passwords (beware issues with[1;23r[23;1H
+[1;24r[23;1H# some PAM modules and threads)[1;23r[23;1H
+[1;24r[23;1HChallengeResponseAuthentication no[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H# Kerberos options[1;23r[23;1H
+[1;24r[23;1H#KerberosAuthentication no[1;23r[23;1H
+[1;24r[23;1H#KerberosOrLocalPasswd yes[1;23r[23;1H
+[1;24r[23;1H#KerberosTicketCleanup yes[1;23r[23;1H
+[1;24r[23;1H#KerberosGetAFSToken no[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H# GSSAPI options[1;23r[23;1H
+[1;24r[23;1H#GSSAPIAuthentication no[1;23r[23;1H
+[1;24r[23;1H#GSSAPICleanupCredentials yes[1;23r[23;1H
+[1;24r[23;1H#GSSAPIStrictAcceptorCheck yes[1;23r[23;1H
+[1;24r[23;1H#GSSAPIKeyExchange no[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H# Set this to 'yes' to enable PAM authentication, account processing,[1;23r[23;1H
+[1;24r[23;1H# and session processing. If this is enabled, PAM authentication will[1;23r[23;1H
+[1;24r[23;1H# be allowed through the ChallengeResponseAuthentication and[1;23r[23;1H
+[1;24r[23;1H# PasswordAuthentication.  Depending on your PAM configuration,[1;23r[23;1H
+[1;24r[23;1H# PAM authentication via ChallengeResponseAuthentication may bypass[1;23r[23;1H
+[1;24r[23;1H# the setting of "PermitRootLogin without-password".[1;23r[23;1H
+[1;24r[23;1H# If you just want the PAM account and session checks to run without[1;23r[23;1H
+[1;24r[23;1H# PAM authentication, then enable this but set PasswordAuthentication[1;23r[23;1H
+[1;24r[23;1H# and ChallengeResponseAuthentication to 'no'.[1;23r[23;1H
+[1;24r[23;1HUsePAM yes[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H#AllowAgentForwarding yes[1;23r[23;1H
+[1;24r[23;1H#AllowTcpForwarding yes[1;23r[23;1H
+[1;24r[23;1H#GatewayPorts no[1;23r[23;1H
+[1;24r[23;1HX11Forwarding yes[1;23r[23;1H
+[1;24r[23;1H#X11DisplayOffset 10[1;23r[23;1H
+[1;24r[23;1H#X11UseLocalhost yes[1;23r[23;1H
+[1;24r[23;1H#PermitTTY yes[1;23r[23;1H
+[1;24r[23;1HPrintMotd no[1;23r[23;1H
+[1;24r[23;1H#PrintLastLog yes[1;23r[23;1H
+[1;24r[23;1H#TCPKeepAlive yes[1;23r[23;1H
+[1;24r[23;1H#PermitUserEnvironment no[1;23r[23;1H
+[1;24r[23;1H#Compression delayed[1;23r[23;1H
+[1;24r[23;1H#ClientAliveInterval 0[1;23r[23;1H
+[1;24r[23;1H#ClientAliveCountMax 3[1;23r[23;1H
+[1;24r[23;1H#UseDNS no[1;23r[23;1H
+[1;24r[23;1H#PidFile /var/run/sshd.pid[1;23r[23;1H
+[1;24r[23;1H#MaxStartups 10:30:100[1;23r[23;1H
+[1;24r[23;1H#PermitTunnel no[1;23r[23;1H
+[1;24r[23;1H#ChrootDirectory none[1;23r[23;1H
+[1;24r[23;1H#VersionAddendum none[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H# no default banner path[1;23r[23;1H
+[1;24r[23;1H#Banner none[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H# Allow client to pass locale environment variables[1;23r[23;1H
+[1;24r[23;1HAcceptEnv LANG LC_*[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H# override default of no subsystems[1;23r[23;1H
+[1;24r[23;1HSubsystem[7Csftp    /usr/lib/openssh/sftp-server[1;23r[23;1H
+[1;24r[23;1H[1;23r[23;1H
+[1;24r[23;1H# Example of overriding settings on a per-user basis[1;23r[23;1H
+[1;24r[23;1H#Match User anoncvs[1;23r[23;1H
+[1;24r[23;1H#[7CX11Forwarding no[1;23r[23;1H
+[1;24r[23;1H#[7CAllowTcpForwarding no[1;23r[23;1H
+[1;24r[23;1H#[7CPermitTTY no[1;23r[23;1H
+[1;24r[23;1H#[7CForceCommand cvs server[22;1H[21;1H[20;1H[19;1H[18;1H[17;1H[16;1H[15;1H[14;1H[13;1H[12;1H[11;1H[10;1H[9;1H[8;1H[7;1H[6;1H[5;1H[4;1H[3;1H[2;1H[1;1H[1;23r[1;1H[L[1;24r[1;1H#ClientAliveInterval 0[1;23r[1;1H[L[1;24r[1;1H#Compression delayed[1;23r[1;1H[L[1;24r[1;1H#PermitUserEnvironment no[1;23r[1;1H[L[1;24r[1;1H#TCPKeepAlive yes[1;23r[1;1H[L[1;24r[1;1H#PrintLastLog yes[1;23r[1;1H[L[1;24r[1;1HPrintMotd no[1;23r[1;1H[L[1;24r[1;1H#PermitTTY yes[1;23r[1;1H[L[1;24r[1;1H#X11UseLocalhost yes[1;23r[1;1H[L[1;24r[1;1H#X11DisplayOffset 10[1;23r[1;1H[L[1;24r[1;1HX11Forwarding yes[1;23r[1;1H[L[1;24r[1;1H#GatewayPorts no[1;23r[1;1H[L[1;24r[1;1H#AllowTcpForwarding yes[1;23r[1;1H[L[1;24r[1;1H#AllowAgentForwarding yes[1;23r[1;1H[L[1;24r[1;1H[1;23r[1;1H[L[1;24r[1;1HUsePAM yes[1;23r[1;1H[L[1;24r[1;1H# and ChallengeResponseAuthentication to 'no'.[1;23r[1;1H[L[1;24r[1;1H# PAM authentication, then enable this but set PasswordAuthentication[1;23r[1;1H[L[1;24r[1;1H# If you just want the PAM account and session checks to run without[1;23r[1;1H[L[1;24r[1;1H# the setting of "PermitRootLogin without-password".[1;23r[1;1H[L[1;24r[1;1H# PAM authentication via ChallengeResponseAuthentication may bypass[1;23r[1;1H[L[1;24r[1;1H# PasswordAuthentication.  Depending on your PAM configuration,[1;23r[1;1H[L[1;24r[1;1H# be allowed through the ChallengeResponseAuthentication and[1;23r[1;1H[L[1;24r[1;1H# and session processing. If this is enabled, PAM authentication will[1;23r[1;1H[L[1;24r[1;1H# Set this to 'yes' to enable PAM authentication, account processing,[1;23r[1;1H[L[1;24r[1;1H[1;23r[1;1H[L[1;24r[1;1H#GSSAPIKeyExchange no[1;23r[1;1H[L[1;24r[1;1H#GSSAPIStrictAcceptorCheck yes[1;23r[1;1H[L[1;24r[1;1H#GSSAPICleanupCredentials yes[1;23r[1;1H[L[1;24r[1;1H#GSSAPIAuthentication no[1;23r[1;1H[L[1;24r[1;1H# GSSAPI options[1;23r[1;1H[L[1;24r[1;1H[1;23r[1;1H[L[1;24r[1;1H#KerberosGetAFSToken no[1;23r[1;1H[L[1;24r[1;1H#KerberosTicketCleanup yes[1;23r[1;1H[L[1;24r[1;1H#KerberosOrLocalPasswd yes[1;23r[1;1H[L[1;24r[1;1H#KerberosAuthentication no[1;23r[1;1H[L[1;24r[1;1H# Kerberos options[1;23r[1;1H[L[1;24r[1;1H[1;23r[1;1H[L[1;24r[1;1HChallengeResponseAuthentication no[1;23r[1;1H[L[1;24r[1;1H# some PAM modules and threads)[1;23r[1;1H[L[1;24r[1;1H# Change to yes to enable challenge-response passwords (beware issues with[1;23r[1;1H[L[1;24r[1;1H[1;23r[1;1H[L[1;24r[1;1H#PermitEmptyPasswords no[1;23r[1;1H[L[1;24r[1;1H#PasswordAuthentication yes[1;23r[1;1H[L[1;24r[1;1H# To disable tunneled clear text passwords, change to no here!
+#iPasswordAuthentication yes#ii:qPasswordAuthentication yes#:q[2;2H[K[3;1HPasswordAuthentication yes
+#PermitEmptyPasswords no[5;1H[K[6;3HChange to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)[7;33H[K[8;1HChallengeResponseAuthentication no[9;1H[K[10;2H Kerberos options[10;19H[K[11;10HAuthentication no[12;10HOrLocalPasswd[13;10HTicketCleanup yes
+#KerberosGetAFSToken no[15;1H[K[16;2H GSSAPI options[16;17H[K[17;8HAuthentication no[17;25H[K[18;8HCleanupCredentials yes[18;30H[K[19;8HStrictAcceptorCheck yes
+#GSSAPIKeyExchange no[21;1H[K[22;3HSet this to 'yes' to enable PAM authentication, account processing,
+# and session processing. If this is enabled, PAM authentication will[3;1H[24;1H:wq"/etc/ssh/sshd_config" 124 lines, 3290 bytes written
+[?2004hroot@syzkaller:~# vi /etc/ssh/sshd_configm /etc/ssh/sshd_config[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l#	$OpenBSD: sshd_config,v 1.103 2018/04/09 20:41:22 tj Exp $
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/bin:/bin:/usr/sbin:/sbin
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+#HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_ecdsa_key
+#HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Ciphers and keying
+#RekeyLimit default none
+
+# Logging
+#SyslogFacility AUTH
+#LogLevel INFO
+
+# Authentication:
+
+#LoginGraceTime 2m
+#PermitRootLogin prohibit-password
+#StrictModes yes
+#MaxAuthTries 6
+#MaxSessions 10
+
+#PubkeyAuthentication yes
+
+# Expect .ssh/authorized_keys2 to be disregarded by default in future.
+#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2
+
+#AuthorizedPrincipalsFile none
+
+#AuthorizedKeysCommand none
+#AuthorizedKeysCommandUser nobody
+
+# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
+#HostbasedAuthentication no
+# Change to yes if you don't trust ~/.ssh/known_hosts for
+# HostbasedAuthentication
+#IgnoreUserKnownHosts no
+# Don't read the user's ~/.rhosts and ~/.shosts files
+#IgnoreRhosts yes
+
+# To disable tunneled clear text passwords, change to no here!
+#
+PasswordAuthentication yes
+#PermitEmptyPasswords no
+
+# Change to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)
+ChallengeResponseAuthentication no
+
+# Kerberos options
+#KerberosAuthentication no
+#KerberosOrLocalPasswd yes
+#KerberosTicketCleanup yes
+#KerberosGetAFSToken no
+
+# GSSAPI options
+#GSSAPIAuthentication no
+#GSSAPICleanupCredentials yes
+#GSSAPIStrictAcceptorCheck yes
+#GSSAPIKeyExchange no
+
+# Set this to 'yes' to enable PAM authentication, account processing,
+# and session processing. If this is enabled, PAM authentication will
+# be allowed through the ChallengeResponseAuthentication and
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication via ChallengeResponseAuthentication may bypass
+# the setting of "PermitRootLogin without-password".
+# If you just want the PAM account and session checks to run without
+# PAM authentication, then enable this but set PasswordAuthentication
+# and ChallengeResponseAuthentication to 'no'.
+UsePAM yes
+
+#AllowAgentForwarding yes
+#AllowTcpForwarding yes
+#GatewayPorts no
+X11Forwarding yes
+#X11DisplayOffset 10
+#X11UseLocalhost yes
+#PermitTTY yes
+PrintMotd no
+#PrintLastLog yes
+#TCPKeepAlive yes
+#PermitUserEnvironment no
+#Compression delayed
+#ClientAliveInterval 0
+#ClientAliveCountMax 3
+#UseDNS no
+#PidFile /var/run/sshd.pid
+#MaxStartups 10:30:100
+#PermitTunnel no
+#ChrootDirectory none
+#VersionAddendum none
+
+# no default banner path
+#Banner none
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+# Example of overriding settings on a per-user basis
+#Match User anoncvs
+#	X11Forwarding no
+#	AllowTcpForwarding no
+#	PermitTTY no
+#	ForceCommand cvs server
+[?2004hroot@syzkaller:~# ^C[?2004l[?2004h[?2004l
+[?2004hroot@syzkaller:~# [7mservice ssh restart[27mservice ssh restart
+[?2004l[?2004hroot@syzkaller:~# [7mpasswd username[27mpasswd username
+[?2004lpasswd: user 'username' does not exist
+[?2004hroot@syzkaller:~# passwd username[K[K[K[K[K[K[K[K[K root
+[?2004lNew password: 
+Retype new password: 
+No password has been supplied.
+New password: 
+Retype new password: 
+No password has been supplied.
+New password: 
+Retype new password: 
+No password has been supplied.
+passwd: Authentication token manipulation error
+passwd: password unchanged
+[?2004hroot@syzkaller:~# 
+[?2004l[?2004hroot@syzkaller:~# ^C[?2004l[?2004h[?2004l
+[?2004hroot@syzkaller:~# QEMU: Terminated
+

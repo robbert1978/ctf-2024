@@ -1,0 +1,4 @@
+# Dirsearch started Mon Nov 11 14:07:58 2024 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://web-q2-q4sr6kqs.darklabhackaday.com:8080/images
+
+403    21B   http://web-q2-q4sr6kqs.darklabhackaday.com:8080/images/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
+403    21B   http://web-q2-q4sr6kqs.darklabhackaday.com:8080/images/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd

@@ -1,0 +1,6 @@
+services:
+  chal:
+    build: .
+    ports:
+      - "${PORT}:1337"
+    cpus: 2

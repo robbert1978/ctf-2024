@@ -1,0 +1,61 @@
+# Dirsearch started Mon Nov 11 09:19:25 2024 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://redteam-a6b65t3p.darklabhackaday.com
+
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/%C0%AE%C0%AE%C0%AF
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/%3f/
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/%ff
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.ht_wsr.txt
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.htaccess.bak1
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.htaccess.orig
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.htaccess.sample
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.htaccessBAK
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.htaccess_sc
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.htm
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.htaccess_orig
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.htaccessOLD2
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.htaccess_extra
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.htaccessOLD
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.htaccess.save
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.html
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.htpasswd_test
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.htpasswds
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/.httr-oauth
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/cgi-bin/
+200     2KB  http://redteam-a6b65t3p.darklabhackaday.com/cgi-bin/printenv.pl
+301   388B   http://redteam-a6b65t3p.darklabhackaday.com/dashboard    -> REDIRECTS TO: http://redteam-a6b65t3p.darklabhackaday.com/dashboard/
+200     5KB  http://redteam-a6b65t3p.darklabhackaday.com/dashboard/
+200     6KB  http://redteam-a6b65t3p.darklabhackaday.com/dashboard/howto.html
+200    31KB  http://redteam-a6b65t3p.darklabhackaday.com/dashboard/faq.html
+200    77KB  http://redteam-a6b65t3p.darklabhackaday.com/dashboard/phpinfo.php
+200    30KB  http://redteam-a6b65t3p.darklabhackaday.com/favicon.ico
+503   425B   http://redteam-a6b65t3p.darklabhackaday.com/examples/servlet/SnoopServlet
+503   425B   http://redteam-a6b65t3p.darklabhackaday.com/examples/
+503   425B   http://redteam-a6b65t3p.darklabhackaday.com/examples
+503   425B   http://redteam-a6b65t3p.darklabhackaday.com/examples/servlets/servlet/CookieExample
+503   425B   http://redteam-a6b65t3p.darklabhackaday.com/examples/jsp/%252e%252e/%252e%252e/manager/html/
+503   425B   http://redteam-a6b65t3p.darklabhackaday.com/examples/jsp/index.html
+503   425B   http://redteam-a6b65t3p.darklabhackaday.com/examples/jsp/snp/snoop.jsp
+503   425B   http://redteam-a6b65t3p.darklabhackaday.com/examples/servlets/index.html
+503   425B   http://redteam-a6b65t3p.darklabhackaday.com/examples/websocket/index.xhtml
+503   425B   http://redteam-a6b65t3p.darklabhackaday.com/examples/servlets/servlet/RequestHeaderExample
+301   382B   http://redteam-a6b65t3p.darklabhackaday.com/img    -> REDIRECTS TO: http://redteam-a6b65t3p.darklabhackaday.com/img/
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/index.php::$DATA
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/phpmyadmin
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/phpmyadmin/doc/html/index.html
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/phpmyadmin/docs/html/index.html
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/phpmyadmin/
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/phpmyadmin/ChangeLog
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/phpmyadmin/scripts/setup.php
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/phpmyadmin/README
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/phpmyadmin/phpmyadmin/index.php
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/phpmyadmin/index.php
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/server-status
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/server-status/
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/server-info
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/Trace.axd::$DATA
+301   386B   http://redteam-a6b65t3p.darklabhackaday.com/uploads    -> REDIRECTS TO: http://redteam-a6b65t3p.darklabhackaday.com/uploads/
+200  1009B   http://redteam-a6b65t3p.darklabhackaday.com/uploads/
+403   325B   http://redteam-a6b65t3p.darklabhackaday.com/web.config::$DATA
+200   802B   http://redteam-a6b65t3p.darklabhackaday.com/Webalizer/
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/webalizer/
+403   444B   http://redteam-a6b65t3p.darklabhackaday.com/webalizer
+200   794B   http://redteam-a6b65t3p.darklabhackaday.com/xampp/

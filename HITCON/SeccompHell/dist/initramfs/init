@@ -1,0 +1,34 @@
+#!/bin/sh
+
+chown 0:0 -R /
+chown 1000:1000 -R /home/user
+chmod 4755 /bin/busybox
+
+mount -t proc none /proc
+mount -t sysfs none /sys
+mount -t tmpfs tmpfs /tmp
+mount -t devtmpfs none /dev
+mkdir -p /dev/pts
+mount -vt devpts -o gid=4,mode=620 none /dev/pts
+/sbin/mdev -s
+
+chmod 666 /dev/ptmx
+
+# network
+insmod /usr/lib/modules/e1000.ko
+ifup lo >& /dev/null
+ifup eth0 >& /dev/null
+
+# banner
+cat /etc/banner
+
+# kernel backdoor
+insmod /usr/lib/modules/i_am_definitely_not_backdoor.ko
+chmod 0666 /dev/i_am_definitely_not_backdoor
+
+# user backdoor
+# echo 'server starting...'
+# setsid cttyhack setuidgid 1000 /bin/socat tcp-l:22222,reuseaddr,fork EXEC:"/home/user/i_am_not_backdoor.bin",pty,stderr
+/bin/sh
+
+poweroff -f

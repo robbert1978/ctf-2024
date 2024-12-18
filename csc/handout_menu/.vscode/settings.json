@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.rc": "ruby",
+        "io_uring.h": "c",
+        "liburing.h": "c",
+        "stdlib.h": "c"
+    }
+}

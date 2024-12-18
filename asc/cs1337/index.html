@@ -1,0 +1,34 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS1337 Board</title>
+</head>
+<body>
+    <h1>CS1337 Board</h1>
+    
+    <!-- Form for posting new messages -->
+    <form method="post" action="/post">
+        <label for="content">New Post:</label>
+        <input type="text" id="content" name="content" required>
+        <input type="submit" value="Post">
+    </form>
+    
+    <h2>Posts:</h2>
+    <ul id="post-list">
+    </ul>
+
+    <!-- JavaScript to fetch and display posts dynamically -->
+    <script>
+        fetch('/posts')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('post-list').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

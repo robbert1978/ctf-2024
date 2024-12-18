@@ -1,0 +1,1 @@
+opt -load ./$choice.so -$choice -enable-new-pm=0 ./test.ll

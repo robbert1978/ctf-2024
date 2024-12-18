@@ -1,0 +1,8 @@
+version: '3'
+services:
+  php-notes:
+    privileged: true
+    build:
+      context: .
+    ports:
+      - "1337:5000"

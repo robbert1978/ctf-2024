@@ -1,0 +1,15 @@
+add_company CompanyA 5000
+add_company CompanyB 3000
+add_project CompanyA Project1 10000
+add_project CompanyB Project2 15000
+hire_worker CompanyA Project1 Worker1 90
+hire_worker CompanyA Project1 Worker2 85
+hire_worker CompanyB Project2 Worker3 95
+worker_info Worker1
+worker_info Worker3
+move_worker Worker1 Project2
+elapse_week
+sell_company CompanyA
+remove_project CompanyB Project2
+fire_worker Worker3
+exit

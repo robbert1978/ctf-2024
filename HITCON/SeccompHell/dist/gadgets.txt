@@ -1,0 +1,4 @@
+0x00000000004024b8 : pop rdi ; ret
+0x00000000004097f2 : pop rsi ; ret
+0x00000000004018e4 : pop rdx ; ret
+0x000000000042f8e7 : pop rax ; ret

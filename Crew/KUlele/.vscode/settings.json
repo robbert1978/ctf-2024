@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.rc": "ruby",
+        "ldt.h": "c"
+    }
+}

@@ -1,0 +1,12 @@
+exec qemu-system-x86_64 \
+    -m 128M \
+    -kernel bzImage \
+    -initrd rootfs.cpio.gz \
+    -append 'rdinit=init console=ttyS0 oops=panic panic=1 quiet' \
+    -monitor /dev/null \
+    -cpu kvm64,+smep,+smap -accel kvm \
+    -smp cores=1,threads=1 \
+    -nographic \
+    -net none \
+    -drive file=/flag,if=virtio,format=raw,readonly=on \
+    -drive file=./exp,if=virtio,format=raw,readonly=on

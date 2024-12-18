@@ -1,0 +1,26 @@
+diff --git a/target/i386/tcg/translate.c b/target/i386/tcg/translate.c
+index 95bad55bf4..309e540957 100644
+--- a/target/i386/tcg/translate.c
++++ b/target/i386/tcg/translate.c
+@@ -233,7 +233,7 @@ typedef struct DisasContext {
+  */
+ #define STUB_HELPER(NAME, ...) \
+     static inline void gen_helper_##NAME(__VA_ARGS__) \
+-    { qemu_build_not_reached(); }
++    { /* qemu_build_not_reached(); */ }
+ 
+ #ifdef CONFIG_USER_ONLY
+ STUB_HELPER(clgi, TCGv_env env)
+@@ -1386,11 +1386,7 @@ static void gen_exception_gpf(DisasContext *s)
+ /* Check for cpl == 0; if not, raise #GP and return false. */
+ static bool check_cpl0(DisasContext *s)
+ {
+-    if (CPL(s) == 0) {
+-        return true;
+-    }
+-    gen_exception_gpf(s);
+-    return false;
++    return true;
+ }
+ 
+ /* XXX: add faster immediate case */

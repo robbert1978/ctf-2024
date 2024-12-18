@@ -1,0 +1,7 @@
+#!/bin/sh
+ulimit -Hn 33000
+
+/bin/nsjail --config /etc/nsjail/nsjail.conf
+
+echo "Bye"
+

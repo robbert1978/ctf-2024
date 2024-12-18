@@ -1,0 +1,24 @@
+Gadgets information
+============================================================
+0x0000000000401004 : add byte ptr [rax + 0x3c], bh ; xor rdi, rdi ; syscall
+0x0000000000401026 : add byte ptr [rax], al ; add byte ptr [rax], al ; syscall
+0x0000000000401028 : add byte ptr [rax], al ; syscall
+0x0000000000401008 : add byte ptr [rax], al ; xor rdi, rdi ; syscall
+0x0000000000401029 : add byte ptr [rdi], cl ; add eax, 0xf48c3c9 ; mov dh, 0x3e ; ret
+0x000000000040102b : add eax, 0xf48c3c9 ; mov dh, 0x3e ; ret
+0x0000000000401006 : cmp al, 0 ; add byte ptr [rax], al ; xor rdi, rdi ; syscall
+0x0000000000401023 : jne 0x400fe5 ; mov eax, 0 ; syscall
+0x0000000000401022 : lea esi, [rbp - 0x40] ; mov eax, 0 ; syscall
+0x0000000000401021 : lea rsi, [rbp - 0x40] ; mov eax, 0 ; syscall
+0x000000000040102c : leave ; ret
+0x0000000000401030 : mov dh, 0x3e ; ret
+0x0000000000401025 : mov eax, 0 ; syscall
+0x0000000000401005 : mov eax, 0x3c ; xor rdi, rdi ; syscall
+0x000000000040102f : movzx edi, byte ptr [rsi] ; ret
+0x000000000040102e : movzx rdi, byte ptr [rsi] ; ret
+0x000000000040102d : ret
+0x000000000040100d : syscall
+0x000000000040100b : xor edi, edi ; syscall
+0x000000000040100a : xor rdi, rdi ; syscall
+
+Unique gadgets found: 20

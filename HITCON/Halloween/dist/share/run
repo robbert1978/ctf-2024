@@ -1,0 +1,14 @@
+#!/bin/sh
+
+socat TCP-LISTEN:1337,fork TCP:127.0.0.1:1338 &
+qemu-system-x86_64 \
+    -m 64M \
+    -smp 2 \
+    -nographic \
+    -monitor /dev/null \
+    -cpu qemu64,+smep,+smap \
+    -kernel /home/chal/bzImage \
+    -append "oops=panic panic=1 console=ttyS0 quiet" \
+    -initrd /home/chal/rootfs.cpio \
+    -netdev user,id=user0,hostfwd=tcp:127.0.0.1:1338-:1337 \
+    -device e1000,netdev=user0

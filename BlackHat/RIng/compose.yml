@@ -1,0 +1,7 @@
+services:
+  the_ring_dist:
+    build: .
+    ports:
+      - 5000
+    privileged: true
+    restart: unless-stopped

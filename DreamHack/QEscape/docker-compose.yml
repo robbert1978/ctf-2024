@@ -1,0 +1,13 @@
+version: "3"
+services:
+  escape:
+    build: .
+    ports:
+      - "4321:4321"
+      - "1337:1337"
+    expose:
+      - "4321"
+      - "1337"
+    restart: always
+    cap_add:
+      - SYS_PTRACE

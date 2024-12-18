@@ -1,0 +1,31 @@
+#!/bin/sh
+
+mkdir /home
+echo 'root:x:0:0:root:/root:/bin/sh' > /etc/passwd
+echo 'root:x:0:' > /etc/group
+chmod 644 /etc/passwd
+chmod 644 /etc/group
+
+adduser user --disabled-password 2>/dev/null
+
+chown -R root:root /
+chmod 700 -R /root
+chown user:root /home/user
+chmod 777 /home/user
+chmod 755 /dev
+
+mount -t devtmpfs none /dev
+mount -t proc -o nodev,noexec,nosuid proc /proc
+# mount -t sysfs -o nodev,noexec,nosuid sysfs /sys
+mount -t tmpfs -o size=10% tmpfs /tmp
+
+echo 0 > /proc/sys/kernel/kptr_restrict
+echo 0 > /proc/sys/kernel/dmesg_restrict
+echo 0 > /proc/sys/kernel/perf_event_paranoid
+
+[ -e /dev/sda ] && cat /dev/sda > /bin/pwn; chmod 755 /bin/pwn
+
+insmod /load.ko
+chmod 666 /dev/load
+
+setsid cttyhack setuidgid 0 /bin/sh

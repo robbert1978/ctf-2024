@@ -1,0 +1,31 @@
+#!/bin/sh
+
+mount -t sysfs -o nodev,noexec,nosuid sysfs /sys
+mount -t proc -o nodev,noexec,nosuid proc /proc
+mount -t tmpfs -o noexec,nosuid,mode=0755 tmpfs /tmp
+mount -t devtmpfs -o nosuid,mode=0755 udev /dev
+mkdir /dev/shm
+mount -t tmpfs shmfs -o size=1m /dev/shm
+
+
+echo -e "\nBoot took $(cut -d' ' -f1 /proc/uptime) seconds\n"
+chmod 600 /flag
+
+insmod vuln.ko
+chmod 666 /dev/safenote
+chmod 740 /startjail
+exec 0</dev/console
+exec 1>/dev/console
+exec 2>/dev/console
+echo 1 > /proc/sys/kernel/kptr_restrict
+echo 1 > /proc/sys/kernel/dmesg_restrict
+chmod 666 /dev/dma_heap/system
+chown ctf:ctf /jail
+
+
+ifconfig eth0 10.0.2.15
+route add default gw 10.0.2.2
+
+#sh
+su root -c /startjail
+poweroff -f

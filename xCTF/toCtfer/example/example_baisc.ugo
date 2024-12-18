@@ -1,0 +1,21 @@
+package main
+
+func main() {
+    var a string = []string{"1111","22222","333333"}
+    a[1] = "2"
+    printf("%s\n",a[1]) // 2
+
+    var b string = "5555555"
+    b = "5"
+    printf("%s\n",b) // 5
+
+    var c int = []int{1,2,3}
+    c[0] = 4
+    printf("%d\n",c[0]) // 4
+
+    var d int = 4
+    d = 5
+    printf("%d\n",d) // 5
+
+    return 0
+}
